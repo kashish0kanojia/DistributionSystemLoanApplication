@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  api_service:
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      db.url: jdbc:mysql://policybazzar.cda40ce8goxx.eu-north-1.rds.amazonaws.com:3306/policyBazzar?createDatabaseIfNotExist=true
+      db.username: admin
+      db.password: admin123
+      MYSQL_PORT: 3306
